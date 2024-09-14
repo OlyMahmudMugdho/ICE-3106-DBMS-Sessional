@@ -1,0 +1,1 @@
+SELECT au_fname, au_lname, pub_name, authors.city FROM authors, publishers where authors.city=publishers.city

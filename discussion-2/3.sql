@@ -1,0 +1,1 @@
+SELECT au_fname,au_lname, CONCAT(au_fname, ' ', au_lname) as full_name FROM titles JOIN titleauthor on titleauthor.title_id=titles.title_id JOIN authors on authors.au_id=titleauthor.au_id WHERE royalty in (SELECT max(royalty) FROM titles) 
